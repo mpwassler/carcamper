@@ -1,0 +1,39 @@
+<div class="">
+	<div class="content">
+		<h1>
+			<%= @trip.title %>
+			<span>
+				<%= link "Edit", to: Routes.trip_path(@conn, :edit, @trip), class: "button" %>
+			</span>
+			<span class="is-pulled-right">
+				<%= link "Add Destination", to: Routes.trip_destination_path(@conn, :new, @trip), class: "button" %>
+			</span>
+			<span ><%= link "Back", to: Routes.trip_path(@conn, :index), class: "button" %></span>
+		</h1>
+		
+	</div>
+	<div class="columns">
+		<div class="column">
+			<%= for d <- @trip.destination do %>
+				<div class="card is-horizontal">
+				  <div class="card-image">
+				    <figure class="image is-4by2">
+				      <img src="https://via.placeholder.com/1280x460.png" alt="Placeholder image">
+				    </figure>
+				  </div>
+				  <div class="card-content">
+				    <div class="media">
+				      <div class="media-content">
+				        <p class="title is-4"><%= d.name %></p>
+				        <p class="subtitle is-6"><%= d.date %></p>
+				      </div>
+				    </div>
+				    <div class="content">				     
+				      <span><%= link "Edit", to: Routes.trip_destination_path(@conn, :edit, d, @trip.id), class: 'button' %></span>			      
+				    </div>
+				  </div>
+				</div>			    
+			<% end %>
+		</div>
+	</div>
+</div>

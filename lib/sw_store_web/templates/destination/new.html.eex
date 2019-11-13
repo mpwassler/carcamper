@@ -1,0 +1,11 @@
+<%= render "form.html", 
+			Map.put(
+				assigns, 
+				:action, 
+				Routes.trip_destination_path(
+					@conn, 
+					:create, 
+					@trip_id
+				)
+			) 
+%>

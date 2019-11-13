@@ -1,0 +1,36 @@
+<div class="hero">
+      <h1>Listing Trips</h1>
+  <div class="">
+      
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Actions</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <%= for trip <- @trips do %>
+            <tr>
+              <td>
+                <%= trip.title %>
+              </td>
+              <td>
+                <%= link "Show", to: Routes.trip_path(@conn, :show, trip), class: 'button' %>
+              </td>
+              <td>                
+                <%= link "Edit", to: Routes.trip_path(@conn, :edit, trip), class: 'button' %>
+              </td>
+              <td>                
+                <%= link "Delete", to: Routes.trip_path(@conn, :delete, trip), method: :delete, data: [confirm: "Are you sure?"], class: 'button' %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  </div>
+  
+      <span><%= link "New Trip", to: Routes.trip_path(@conn, :new), class: "button" %></span>
+</div>
