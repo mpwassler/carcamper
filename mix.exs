@@ -44,7 +44,7 @@ defmodule SwStore.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:react_phoenix, "~> 1.0.0"},
-      {:wallaby, "~> 0.23.0", [runtime: false, only: :test]}
+      {:hound, "~> 1.0"}
     ]
   end
 

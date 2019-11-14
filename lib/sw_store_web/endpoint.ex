@@ -1,6 +1,10 @@
 defmodule SwStoreWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :sw_store
 
+  if Application.get_env(:sw_store, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+
   socket "/socket", SwStoreWeb.UserSocket,
     websocket: true,
     longpoll: false

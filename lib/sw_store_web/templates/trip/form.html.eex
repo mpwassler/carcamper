@@ -5,9 +5,9 @@
     </div>
   <% end %>
   <label class="label">
-    Title: <%= text_input f, :title, class: "input" %>
+    Title: <%= text_input f, :title, class: "input", id: "trip_name" %>
   </label>
   <div>
-    <%= submit "Save", class: "button" %>
+    <%= submit "Save", class: "button", id: "create_trip" %>
   </div>
 <% end %>

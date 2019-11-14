@@ -25,6 +25,14 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :hound,
+  driver: "chrome_driver",
+  host: "http://selenium",
+  port: 4444,
+  app_host: "http://phoenix",
+  app_port: "4001",
+  path_prefix: "wd/hub/"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

@@ -28,8 +28,7 @@ defmodule SwStoreWeb.TripController do
   def show(conn, %{"id" => id}) do
   	trip = Trip 
   		|> Repo.get!(id)
-  		|> Repo.preload(:destination) 
-  	IO.inspect(trip)
+  		|> Repo.preload(:destination)   	
     render(conn, "show.html", trip: trip)
   end
 
