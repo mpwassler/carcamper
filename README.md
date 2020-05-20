@@ -1,20 +1,12 @@
-# SwStore
+# Car Camper
 
-To start your Phoenix server:
+An elixir app I was working on for planing road / camping trips. Not finished and I haven't worked on it in a while. I may come back to it.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+Built with docker
+
+To Run:
+ * docker-compose up
+ * migrations: `docker-compose exec phoenix mix ecto.migrate` or `docker-compose exec phoenix mix ecto.setup`
+ * install node assets: `docker-compose exec phoenix bash -c "cd assets && npm install"`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
