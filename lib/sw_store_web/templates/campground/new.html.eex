@@ -1,0 +1,5 @@
+  <%= react_component("ActivityMap", %{
+	latitude: @destination.latitude, 
+	longitude: @destination.longitude,
+	options: @options
+}) %>

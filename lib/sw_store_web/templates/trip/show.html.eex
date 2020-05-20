@@ -18,7 +18,10 @@
 				<div class="card is-horizontal">
 				  <div class="card-image">
 				    <figure class="image is-4by2">
-				      <img src="https://via.placeholder.com/1280x460.png" alt="Placeholder image">
+				        <%= react_component("MapDisplay", %{
+				        	latitude: d.latitude, 
+				        	longitude: d.longitude
+				        }) %>
 				    </figure>
 				  </div>
 				  <div class="card-content">
@@ -29,7 +32,9 @@
 				      </div>
 				    </div>
 				    <div class="content">				     
-				      <span><%= link "Edit", to: Routes.trip_destination_path(@conn, :edit, d, @trip.id), class: 'button' %></span>			      
+				      <span><%= link "Edit", to: Routes.trip_destination_path(@conn, :edit, d, @trip.id), class: 'button' %></span>	
+				      <span><%= link "Add Trails", to: Routes.destination_trail_path(@conn, :new, d.id), class: 'button' %></span>			      
+				      <span><%= link "Add Campground", to: Routes.destination_campground_path(@conn, :new, d.id), class: 'button' %></span>			      
 				    </div>
 				  </div>
 				</div>			    

@@ -21,6 +21,10 @@ defmodule SwStoreWeb.Router do
        post "/destinations/new", DestinationController, :create
        get "/destinations/:id/edit", DestinationController, :edit
     end
+    resources "/destinations", DestinationController do 
+      get "/campground/new", CampgroundController, :new
+      get "/trail/new", TrailController, :new
+    end
 
     resources "/products", ProductController
   end

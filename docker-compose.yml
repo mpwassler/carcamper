@@ -10,6 +10,8 @@ x-app:
     PGPASSWORD: mitchel
     PGDATABASE: cakes
     PGPORT: 5432
+    HIKING_PROG_KEY: ${HIKING_PROG_KEY}
+    RECGOV_KEY: ${RECGOV_KEY}
     # Hostname of our Postgres container
     PGHOST: db         
   volumes:

@@ -38,7 +38,7 @@ defmodule SwStoreWeb do
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
-
+      import ReactPhoenix.ClientSide
       import SwStoreWeb.ErrorHelpers
       import SwStoreWeb.Gettext
       alias SwStoreWeb.Router.Helpers, as: Routes
